@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Seoul</h1>
+    <p id="book"></p>
+    <p id="author"></p>
+    <p id="pages"></p>
+    <p id="read"></p>
+
+</body>
+
+<script>
+    const book = {
+        title: "Reign of Joseon",
+        author: "King Sejong",
+        pages: 694,
+        read: false,
+    }
+
+    function Book(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.info = function() {
+            return `${this.title} by ${this.author}, pages ${this.pages}, read: ${this.read}`;
+        }
+    }
+
+    const book1 = new Book("Reign of Joseon", "King Sejong", 694, false);
+    book1.info();
+
+    document.getElementById("book").innerHTML = book1.info();
+    
+    console.log("OOP");
+</script>
+
+
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    p {
+        color: white;
+    }
+</style>
+
+</html>
