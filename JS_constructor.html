@@ -8,45 +8,39 @@
 </head>
 
 <body>
-    <h1>Seoul</h1>
-    <p id="book"></p>
-    <p id="author"></p>
-    <p id="pages"></p>
-    <p id="read"></p>
+    <div class="container">
+        <h1>Seoul</h1>
+
+        <div class="header">
+            <div class="input-container">
+                <input autocomplete=""off" type="text" id="todo-input" placeholder="Title">
+                <br>
+                <br>
+            </div>
+            <button id="todo-add-btn">Add</button>
+        </div>
+
+        <div>
+            <ul id="todos-list">
+                    <li>
+                        <input type="checkbox" class="checkbox">
+                        <span class="remove">&cross;</span>
+                    </li>
+            </ul>
+        </div>
+
+    </div>
+
 
 </body>
 
-<script>
-    const book = {
-        title: "Reign of Joseon",
-        author: "King Sejong",
-        pages: 694,
-        read: false,
-    }
-
-    function Book(title, author, pages, read) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-        this.read = read;
-        this.info = function() {
-            return `${this.title} by ${this.author}, pages ${this.pages}, read: ${this.read}`;
-        }
-    }
-
-    const book1 = new Book("Reign of Joseon", "King Sejong", 694, false);
-    book1.info();
-
-    document.getElementById("book").innerHTML = book1.info();
-    
-    console.log("OOP");
-</script>
+<script src="script.js"></script>
 
 
 
 <style>
     body {
-        background-color: black;
+        background-color: salmon;
     }
 
     h1 {
